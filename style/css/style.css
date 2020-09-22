@@ -1,0 +1,75 @@
+/*//// logos + titres ////*/
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../../assets/polices/shrikhand-regular-webfont.woff2") format("woff2"), url("../../assets/polices/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoblack";
+  src: url("../../assets/polices/roboto-black-webfont.woff2") format("woff2"), url("../../assets/polices/roboto-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*//// texte ////*/
+@font-face {
+  font-family: "robotoregular";
+  src: url("../../assets/polices/roboto-regular-webfont.woff2") format("woff2"), url("../../assets/polices/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*///////////////////*/
+.logo {
+  font-family: robotoblack, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: robotoblack, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-family: robotoblack, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3 {
+  font-family: robotoblack, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-family: robotoregular, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  font-family: robotoregular, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=style.css.map */

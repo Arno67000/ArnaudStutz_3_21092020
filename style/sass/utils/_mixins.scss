@@ -1,0 +1,14 @@
+@mixin text-typography {
+    font-family: robotoregular, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+@mixin titles-typography($size) {
+    font-family: robotoblack, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: $size;
+    font-weight: normal;
+    font-style: normal;
+}
