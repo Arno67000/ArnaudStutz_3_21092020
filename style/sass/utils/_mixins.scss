@@ -1,0 +1,37 @@
+@mixin text-typography {
+    font-family: robotoregular, sans-serif;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+}
+
+@mixin titles-typography($size) {
+    font-family: robotoblack, sans-serif;
+    text-decoration: none;
+    font-size: $size;
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+}
+
+@mixin menu-titles-typography($size) {
+    font-family: shrikhandregular, sans-serif;
+    text-decoration: none;
+    font-size: $size;
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+}
+
+@mixin button-gradient {
+    background: linear-gradient(to top left, $colour-primary, $colour-secondary);
+    color: $colour-bkgr;
+}
+
+@mixin button-style {
+    border: 0 none transparent;
+    border-radius: 25px;
+    box-shadow: 3px 5px 7px 1px $colour-bkgr-shadow;
+    font-size: 1rem;
+    font-weight: bold;
+}

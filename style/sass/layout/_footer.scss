@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 6% 0 6% 7%;
+    margin-top: 0;
+    background-color: black;
+    &>* {
+        color: color-text(black);
+    }
+}
+
+.footer__link {
+    width: 100%;
+    &--icones {
+        font-size: 0.8rem;
+        margin-right: 1%;
+    }
+    & #ico-fork {
+        width: 1.25em;
+    }
+    &>* {
+        color: color-text(black);
+    }
+}

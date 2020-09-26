@@ -1,0 +1,71 @@
+/*//// logos + titres ////*/
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../../assets/polices/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../../assets/polices/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../../assets/polices/roboto-black-webfont.woff2') format('woff2'),
+         url('../../assets/polices/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*//// texte ////*/
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../../assets/polices/roboto-regular-webfont.woff2') format('woff2'),
+         url('../../assets/polices/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*///////////////////*/
+
+h1 {
+    @include titles-typography(1.4rem);
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+article h1 {
+    @include menu-titles-typography(1.8rem);
+}
+
+h2
+{
+    @include titles-typography(1.4rem);
+    margin-left: 3%;
+}
+
+.article__menu h2 {
+    font-weight: normal;
+    font-family: robotoregular, sans-serif;
+    margin: 3rem 0 1% 5%; 
+}
+
+h3 {
+    @include titles-typography(1.2rem);
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+
+p {
+    @include text-typography;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    text-align: left;
+}
+
+a {
+    @include text-typography;
+}
