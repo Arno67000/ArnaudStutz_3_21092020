@@ -1,0 +1,39 @@
+.btn {
+    width: 65%;
+    height: 3rem;
+    @include button-gradient;
+    @include button-style;
+    &--menu {
+        margin: 2em 17.5% 0 17.5%;
+    }
+}
+
+.nav-btn {
+    width: 90%;
+    height: 4.5rem;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    background-color: $colour-bkgr;
+    margin-bottom: 6%;
+    margin-right: 4%;
+    @include button-style;
+    &__numbers {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        background-color: $colour-primary;
+        border-radius: 20px;
+        position: relative;
+        left: -16px;
+        color: color-text($colour-primary);
+        font-size: 0.8rem;
+    }
+    &__icone {
+        color: color-text($colour-bkgr);
+        margin-right: 6%;
+        margin-left: 2%;
+        font-size: 1.1rem;
+    }
+}
