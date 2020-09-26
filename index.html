@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="initial-scale=1" />
@@ -15,11 +15,12 @@
 		</header>
 <!--////////////RECHERCHE////////////////-->
 		<main>
+			<hr class="divider">
 			<div class="localisation">
 				<div class="localisation__heading">
 					<i class="fas fa-map-marker-alt"></i><!--icone gps marker-->
 					<form method="post" action="#">
-						<input type="search" name="search" class="form" value="Paris, Belleville" />
+						<input type="text" name="search" class="form" value="Paris, Belleville" />
 					</form>
 				</div>
 				<h1>Book the menu you like</h1>
@@ -29,11 +30,9 @@
 <!--//////////////NAV///////////////////-->
 			<nav>
 				<h2>How it works</h2>
-				<div>
-					<button class="bouton"><div class="bouton__numbers">1</div><i class="fas fa-mobile-alt"></i>Chose a restaurant</button>
-					<button class="bouton"><div class="bouton__numbers">2</div><i class="fas fa-list-ul"></i>Create your menu</button>
-					<button class="bouton"><div class="bouton__numbers"></div><i class="fas fa-store"></i>Go enjoy it at the restaurant</button>
-				</div>
+				<button class="nav-btn"><span class="nav-btn__numbers">1</span><i class="nav-btn__icone fas fa-mobile-alt"></i>Chose a restaurant</button>
+				<button class="nav-btn"><span class="nav-btn__numbers">2</span><i class="nav-btn__icone fas fa-list-ul"></i>Create your menu</button>
+				<button class="nav-btn"><span class="nav-btn__numbers">3</span><i class="nav-btn__icone fas fa-store"></i>Go enjoy it at the restaurant</button>
 			</nav>
 <!--///////////////////ARTICLE/////////////-->
 			<article>
@@ -43,58 +42,70 @@
 						<picture>
 							<img src="assets/images/palette_main_phone.jpg" alt="photo plats"/>
 						</picture>
-						<h3>The Full Palette</h3>
-						<p>New York</p>
-						<div class="new">
-							<p>New</p>
-						</div>
-						<i class="far fa-heart"></i>
+						<div class="thumbnail__title">
+							<div>
+								<h3>The Full Palette</h3>
+								<p>New York</p>
+							</div>
+							<div class="thumbnail__title--new">New</div>
+						</div>	
 					</a>	
+					<i class="far fa-heart"></i>
 				</div>
 				<div class="thumbnail">
 					<a href="pages/menu_plate.html">
 						<picture>
 							<img src="assets/images/plate_main_phone.jpg" alt="photo plats"/>
 						</picture>
-						<h3>The Enchanted Plate</h3>
-						<p>New York</p>
-						<div class="new">
-							<p>New</p>
+						<div class="thumbnail__title">
+							<div>
+								<h3>The Enchanted Plate</h3>
+								<p>New York</p>
+							</div>
+							<div class="thumbnail__title--new">New</div>
 						</div>
-						<i class="far fa-heart"></i>
-					</a>	
+					</a>
+					<i class="far fa-heart"></i>	
 				</div>
 				<div class="thumbnail">
 					<a href="pages/menu_bastille.html">
 						<picture>
 							<img src="assets/images/bastille_main_phone.jpg" alt="photo plats" />
 						</picture>
-						<h3>Bastille</h3>
-						<p>New York</p>
-						<i class="far fa-heart"></i>
+						<div class="thumbnail__title">
+							<div>
+								<h3>Bastille</h3>
+								<p>New York</p>
+							</div>
+						</div>
 					</a>	
+					<i class="far fa-heart"></i>
 				</div>
 				<div class="thumbnail">
 					<a href="pages/menu_gourmand.html">
 						<picture>
 							<img src="assets/images/gourmand_main_phone.jpg" alt="photo plats"/>
 						</picture>
-						<h3>Le Gourmand</h3>
-						<p>New York</p>
-						<i class="far fa-heart"></i>
+						<div class="thumbnail__title">
+							<div>
+								<h3>Le Gourmand</h3>
+								<p>New York</p>
+							</div>
+						</div>
 					</a>	
+					<i class="far fa-heart"></i>
 				</div>
 			</article>
 		</main>
 <!--////////////PIED-DE-PAGE/////////////-->		
 		<footer>
-			<p><img src="assets/images/ohmyfoodsvg.svg" alt="logo ohmyfood" class="logo--footer"></p>
+			<p><img src="assets/images/ohmyfoodsvg-white.svg" alt="logo ohmyfood" class="logo--footer"></p>
 			<div class="footer__link">
-				<i class="fas fa-utensils"></i>
+				<i class="footer__link--icones fas fa-utensils" id="ico-fork"></i>
 				<a href="#">Suggest a restaurant</a>
 			</div>
 			<div class="footer__link">
-				<i class="fas fa-hands-helping"></i>
+				<i class="footer__link--icones fas fa-hands-helping"></i>
 				<a href="#">Become a partner</a>
 			</div>
 			<a href="#">Legal</a>
