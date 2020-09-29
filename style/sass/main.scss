@@ -1,6 +1,7 @@
 @import "utils/variables";
 @import "utils/functions";
 @import "utils/mixins";
+@import "utils/keyframes";
 
 @import "base/typography";
 @import "base/base";
@@ -8,6 +9,7 @@
 @import "components/buttons";
 @import "components/logo";
 @import "components/dividers";
+@import "components/loader";
 
 @import "layout/header";
 @import "layout/recherche";

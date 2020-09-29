@@ -2,6 +2,10 @@
     height: 1.6rem;
     margin-bottom: 2%;
     margin-top: 8%;
+    &--main {
+        animation: fadein 1.5s 1.5s linear;
+        animation-fill-mode: both;
+    }
     &--footer {
         height: 1rem;
         width: auto;

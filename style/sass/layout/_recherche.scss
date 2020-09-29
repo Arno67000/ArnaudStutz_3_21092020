@@ -33,7 +33,7 @@
     text-align: start;
     padding-bottom: 2%;
     margin-left: 6%;
-    @include text-typography;
+    @include text-typography(1.1rem);
     font-weight: 500;
 }
 
