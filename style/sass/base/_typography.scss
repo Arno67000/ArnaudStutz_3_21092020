@@ -37,7 +37,8 @@ h1 {
 }
 
 article h1 {
-    @include menu-titles-typography(1.8rem);
+    @include menu-titles-typography(1.6rem);
+    margin-top: 0%;
 }
 
 h2
@@ -47,9 +48,8 @@ h2
 }
 
 .article__menu h2 {
-    font-weight: normal;
     font-family: robotoregular, sans-serif;
-    margin: 3rem 0 1% 5%; 
+    margin: 1rem 0 1% 5%; 
 }
 
 h3 {
@@ -60,12 +60,12 @@ h3 {
 
 
 p {
-    @include text-typography;
+    @include text-typography(1.1rem);
     margin-top: 1%;
     margin-bottom: 0%;
     text-align: left;
 }
 
 a {
-    @include text-typography;
+    @include text-typography(1.1rem);
 }

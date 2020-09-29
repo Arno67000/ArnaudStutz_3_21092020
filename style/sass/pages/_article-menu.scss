@@ -16,11 +16,16 @@
         width: 90%;
         margin-left: 4%;
         height: 4rem;
-        & .fa-heart {
+        &--coeur {
+            float: right;
             position: relative;
-            top: -4rem;
-            font-size: 1.5rem;
+            top: -3.8rem;
+            font-size: 1.8rem;
         }
+    }
+    &__menu {
+        width: 100%;
+        @include delay;
     }
 }
 
@@ -29,50 +34,83 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
     &__btn {
         width: 90%;
-        height: 6em;
+        height: 5.5em;
         background-color: white;
         border: none;
-        padding: 0% 0% 0% 3%;
+        padding: 0% 0% 0% 2%;
         border-radius: 20px;
         margin-top: 0%;
         margin-bottom: 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        box-shadow: $shadows;
+        overflow: hidden;
+        &:hover {
+            box-shadow: $shadows-enhanced;
+            .menu-thumbnail__btn--check {
+                    transform: translateX(-100%);
+                    transition: transform 0.5s ease-out;
+                    &--logo {
+                        transform: rotate(1turn);
+                        transition: transform 0.5s ease-out 0.15s;
+                    }
+            }
+            .menu-thumbnail__btn--subtitle {
+                &--price {
+                    transform: translateX(-100%);
+                    transition: transform 0.5s ease-out;
+                }
+            }
+        }
         &--title {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            justify-content: space-evenly;
+            width: auto;
+            height: 100%;   
+        }
+        &--subtitle {
+            display: flex;
+            justify-content: space-between;
             width: 100%;
-            & div {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
+            height: 50%;
+            margin: 1% 0 1% 0;
+            flex-wrap: nowrap;
+            &--txt {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: auto;
                 height: 100%;
-                @include text-typography;
-                margin: 1% 0 1% 0;
-                flex-wrap: nowrap;
-                & p {
-                    overflow: scroll;
-                    word-wrap: normal;
-                }
+                @include text-typography(0.9rem);
+            }
+            &--price {
+                @include text-typography(1rem);
+                width: 5.5em;
+                text-align: right;
+                height: 100%;
+                margin-right: 3%;
             }
         }
         &--check {
             background-color: $colour-tertiary;
-            width: 5em;
-            height: 6em;
-            line-height: 6em;
+            float: right;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -100%;
+            right: -6em;
+            width: 5.5em;
+            height: 5.5em;
             border-radius: 0 20px 20px 0;
             &--logo {
-                font-size: 1.5rem;
+                color: white;
+                font-size: 2rem;
+                line-height: 5.5em;
             }
         }
     }
-}
-article {
-    padding: 0;
-    margin: 0;
 }
