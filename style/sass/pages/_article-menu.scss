@@ -1,9 +1,8 @@
 .article {
     background-color: $colour-bkgr;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     position: relative;
-    top: -5rem;
     border-radius: 20px 20px 0 0;
     padding-top: 10%;
     margin-bottom: 0%;
@@ -12,20 +11,42 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    @include desktop {
+        padding-top: 5%;
+    }
     &__heading {
         width: 90%;
         margin-left: 4%;
         height: 4rem;
-        &--coeur {
-            float: right;
-            position: relative;
-            top: -3.8rem;
-            font-size: 1.8rem;
+        @include desktop {
+            margin: auto;
         }
     }
     &__menu {
         width: 100%;
         @include delay;
+        @include desktop {
+            padding: 5% 0 10% 0;
+            margin-bottom: 0%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            & h2 {
+                width: 16%;
+                margin-top: 5%;
+            }
+        }
+        @include tablette {
+            margin-bottom: 0%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            & h2 {
+                text-align: center;
+                width: 100%;
+                margin: 0;
+            }
+        }
     }
 }
 
@@ -35,6 +56,14 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    @include desktop {
+        width: 29%;
+        margin-bottom: 8%;
+    }
+    @include tablette {
+        width: 60%;
+        margin-bottom: 5%;
+    }
     &__btn {
         width: 90%;
         height: 5.5em;
@@ -61,6 +90,14 @@
                     transform: translateX(-100%);
                     transition: transform 0.5s ease-out;
                 }
+                &--txt {
+                    width: 60%;
+                    transition: width 0.5s ease-out;
+                }
+            }
+            .menu-thumbnail__btn--title h3 {
+                width: 60%;
+                transition: width 0.5s ease-out;
             }
         }
         &--title {
@@ -75,16 +112,17 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            height: 50%;
+            height: 40%;
             margin: 1% 0 1% 0;
             flex-wrap: nowrap;
+            align-self: flex-end;
             &--txt {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                width: auto;
+                width: 80%;
                 height: 100%;
-                @include text-typography(0.9rem);
+                @include text-typography(0.8rem);
             }
             &--price {
                 @include text-typography(1rem);
@@ -92,6 +130,9 @@
                 text-align: right;
                 height: 100%;
                 margin-right: 3%;
+                @include desktop {
+                    @include text-typography(1.2rem);
+                }
             }
         }
         &--check {

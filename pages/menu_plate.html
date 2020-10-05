@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="initial-scale=1" />
-		<link rel="stylesheet" media="(max-width: 759px)" href="../style/css/style.css"/>
+		<link rel="stylesheet" href="../style/css/prefixed/style.css"/>
 		<script src="https://kit.fontawesome.com/3c2893d5d3.js" crossorigin="anonymous"></script>
 		<title>Projet ohmyfood</title>
 	</head>
@@ -19,13 +19,16 @@
 
 		<main>
 			<picture>
+				<source media="(min-width: 760px)" srcset="../assets/images/plate.jpg"/>
+				<source srcset="../assets/images/plate_menu_phone.jpg"/>
 				<img src="../assets/images/plate_menu_phone.jpg" alt="photo plat" class="img-menu"/>
 			</picture>
 			<article>
 				<div class="article">
 					<div class="article__heading">
 						<h1>The Enchanted Plate</h1>
-						<i class="far fa-heart article__heading--coeur"></i>
+						<i class="far fa-heart coeur coeur__bord coeur__bord--menu"></i>
+						<i class="fas fa-heart coeur coeur__background coeur__background--menu"></i>
 					</div>
 					<div class="article__menu">
 						<h2>ENTREES</h2>

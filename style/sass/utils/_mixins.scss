@@ -38,6 +38,14 @@
     box-shadow: $shadows;
     font-size: 1rem;
     font-weight: bold;
+    @include desktop {
+        font-size: 1.4rem;
+        height: 5rem;
+    }
+    @include tablette {
+        font-size: 1.1rem;
+        height: 4.2rem;
+    }
 }
 
 /*MIXINS FOR ANIMATION MENUS*/
@@ -58,7 +66,7 @@
     }
 }
 @mixin desktop {
-    @media (min-width: map-get($map: $breakpoints, $key: "desktop")) {
+    @media (min-width: map-get($map: $breakpoints, $key: "desktop-min")) {
         @content;
     }
     
