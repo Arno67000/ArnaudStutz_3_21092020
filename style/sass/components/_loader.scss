@@ -12,11 +12,27 @@
     top: 10rem;
     animation:loading 1.5s 0.1s cubic-bezier(.25, .20, .25,.20), fadein 1s 1.5s ease-in reverse;
     animation-fill-mode: both;
+    @include desktop {
+        width: 400px;
+        height: 400px;
+        border-radius: 300px;
+    }
+    @include tablette {
+        width: 400px;
+        height: 400px;
+        border-radius: 300px;
+    }
     & .fa-utensils {
         line-height: 150px;
         font-size: 4.5rem;
         color: color-text($colour-tertiary);
         animation:loading-reverse 0.5s 0.1s linear 3, fadein 0.7s alternate 2, fadein 1s 1.5s ease-in reverse;
         animation-fill-mode: both;
+        @include desktop {
+            font-size: 6.5rem;
+        }
+        @include tablette {
+            font-size: 6.5rem;
+        }
     }
 }

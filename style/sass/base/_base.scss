@@ -6,4 +6,14 @@ body {
 .main-page {
     animation: fadein 1.5s 1.5s linear;
     animation-fill-mode: both;
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include tablette {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
