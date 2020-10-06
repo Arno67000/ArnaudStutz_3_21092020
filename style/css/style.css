@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* COLORS */
-/* SHADOWS */
+/* SHADOWS and BORDERS*/
+/* ANIMATIONS */
 /* BREAKPOINTS FOR RESPONSIVE */
 /*MIXINS FOR TYPOGRAPHY*/
 /*MIXINS FOR BUTTONS */
@@ -42,20 +43,20 @@
 /*//// logos + titres ////*/
 @font-face {
   font-family: "shrikhandregular";
-  src: url("../../../assets/polices/shrikhand-regular-webfont.woff2") format("woff2"), url("../../../assets/polices/shrikhand-regular-webfont.woff") format("woff");
+  src: url("../../assets/polices/shrikhand-regular-webfont.woff2") format("woff2"), url("../../assets/polices/shrikhand-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "robotoblack";
-  src: url("../../../assets/polices/roboto-black-webfont.woff2") format("woff2"), url("../../../assets/polices/roboto-black-webfont.woff") format("woff");
+  src: url("../../assets/polices/roboto-black-webfont.woff2") format("woff2"), url("../../assets/polices/roboto-black-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 /*//// texte ////*/
 @font-face {
   font-family: "robotoregular";
-  src: url("../../../assets/polices/roboto-regular-webfont.woff2") format("woff2"), url("../../../assets/polices/roboto-regular-webfont.woff") format("woff");
+  src: url("../../assets/polices/roboto-regular-webfont.woff2") format("woff2"), url("../../assets/polices/roboto-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -247,6 +248,7 @@ body {
 .btn:hover {
   opacity: 0.8;
   box-shadow: 5px 7px 3px 4px #cccccc;
+  cursor: pointer;
 }
 .btn--menu {
   margin: 2em 17.5% 8% 17.5%;
@@ -330,6 +332,7 @@ body {
 .nav-btn:hover {
   background-color: #efe6fa;
   box-shadow: 5px 7px 3px 4px #cccccc;
+  cursor: pointer;
 }
 .nav-btn:hover .nav-btn__icone {
   color: #9356DC;
@@ -395,13 +398,10 @@ body {
   }
 }
 .divider--menu {
-  border-style: none;
   background: #99E2D0;
   width: 3.5rem;
-  height: 0.3rem;
   margin: 0 0 2rem 5%;
   border-radius: 5px;
-  z-index: 2;
 }
 @media (min-width: 1025px) {
   .divider--menu {
@@ -448,7 +448,7 @@ body {
   line-height: 150px;
   font-size: 4.5rem;
   color: #32b091;
-  animation: loading-reverse 0.5s 0.1s linear 3, fadein 0.7s alternate 2, fadein 1s 1.5s ease-in reverse;
+  animation: loading-reverse 0.5s 0.1s linear 3, fadein 1s 1.5s ease-in reverse;
   animation-fill-mode: both;
 }
 @media (min-width: 1025px) {
@@ -498,6 +498,7 @@ body {
 .coeur__background:hover {
   opacity: 0.5;
   transform: scale(0.82);
+  cursor: pointer;
 }
 .coeur__background--menu {
   top: -4rem;
@@ -536,17 +537,23 @@ header {
 @media (min-width: 1025px) {
   .localisation {
     width: 49.5%;
-    padding-bottom: 2%;
+    height: auto;
+    background-color: #f0f0f0;
+    align-items: center;
     border: 3px solid #e6e6e6;
-    margin: 0%;
+    margin: 0;
+    padding-bottom: 2%;
   }
 }
 @media (min-width: 760px) and (max-width: 1024px) {
   .localisation {
     width: 49%;
-    padding-bottom: 2%;
+    height: auto;
+    background-color: #f0f0f0;
+    align-items: center;
     border: 3px solid #e6e6e6;
-    margin: 0%;
+    margin: 0;
+    padding-bottom: 2%;
   }
 }
 .localisation p {
@@ -590,6 +597,10 @@ header {
   font-size: 1.1rem;
   color: black;
   font-weight: 500;
+}
+.form:focus {
+  background-color: #f0f0f0;
+  color: #32b091;
 }
 @media (min-width: 1025px) {
   .form {
@@ -735,7 +746,7 @@ article {
 .thumbnail picture img {
   width: 100%;
   height: auto;
-  margin: 0% 0% 0% 0%;
+  margin: 0;
   border-radius: 20px 20px 0 0;
 }
 @media (min-width: 1025px) {
@@ -769,7 +780,7 @@ article {
 .thumbnail__title--new {
   width: 4.8rem;
   height: 2rem;
-  margin: 0px 0px 0px 0px;
+  margin: 0;
   position: relative;
   left: -1.2rem;
   top: -10.5rem;
@@ -990,6 +1001,7 @@ header {
 }
 .menu-thumbnail__btn:hover {
   box-shadow: 5px 7px 3px 4px #cccccc;
+  cursor: pointer;
 }
 .menu-thumbnail__btn:hover .menu-thumbnail__btn--check {
   transform: translateX(-100%);
@@ -1018,6 +1030,9 @@ header {
   justify-content: space-evenly;
   width: auto;
   height: 100%;
+}
+.menu-thumbnail__btn--title h3 {
+  width: 100%;
 }
 .menu-thumbnail__btn--subtitle {
   display: flex;

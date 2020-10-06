@@ -13,6 +13,7 @@
     &:hover {
         opacity: 0.80;
         box-shadow: $shadows-enhanced;
+        cursor: pointer;
     }
     &--menu {
         margin: 2em 17.5% 8% 17.5%;
@@ -49,7 +50,7 @@
         height: 1.5rem;
         line-height: 1.5rem;
         background-color: $colour-primary;
-        border-radius: 20px;
+        border-radius: $radius;
         position: relative;
         text-align: center;
         left: -16px;
@@ -72,6 +73,7 @@
     &:hover {
         background-color: $colour-primary-light;
         box-shadow: $shadows-enhanced;
+        cursor: pointer;
         .nav-btn__icone {
             color: $colour-primary;
         }

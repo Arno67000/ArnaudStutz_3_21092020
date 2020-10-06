@@ -8,20 +8,10 @@ nav {
     align-items: flex-start;
     @include desktop {
         width: 49.5%;
-        height: auto;
-        background-color: $colour-bkgr;
-        align-items: center;
-        border: 3px solid $colour-bkgr-dark;
-        margin: 0;
-        padding-bottom: 2%;
+        @include nav-recherche-pattern;
     }
     @include tablette {
         width: 49%;
-        height: auto;
-        background-color: $colour-bkgr;
-        align-items: center;
-        border: 3px solid $colour-bkgr-dark;
-        margin: 0;
-        padding-bottom: 2%;
+        @include nav-recherche-pattern;
     }
 }
