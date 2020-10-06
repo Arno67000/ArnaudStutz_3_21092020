@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="initial-scale=1" />
-		<link rel="stylesheet" media="(max-width: 759px)" href="../style/css/style.css"/>
+		<link rel="stylesheet" href="../style/css/prefixed/style.css"/>
 		<script src="https://kit.fontawesome.com/3c2893d5d3.js" crossorigin="anonymous"></script>
 		<title>Projet ohmyfood</title>
 	</head>
@@ -19,24 +19,27 @@
 
 		<main>
 			<picture>
+				<source media="(min-width: 760px)" srcset="../assets/images/bastille.jpg"/>
+				<source srcset="../assets/images/bastille_menu_phone.jpg"/>
 				<img src="../assets/images/bastille_menu_phone.jpg" alt="photo plat" class="img-menu"/>
 			</picture>
 			<article>
 				<div class="article">
 					<div class="article__heading">
 						<h1>Bastille</h1>
-						<i class="far fa-heart"></i>
+						<i class="far fa-heart coeur coeur__bord coeur__bord--menu"></i>
+						<i class="fas fa-heart coeur coeur__background coeur__background--menu"></i>
 					</div>
 					<div class="article__menu">
 						<h2>ENTREES</h2>
 						<hr class="divider--menu"/>
 						<div class="menu-thumbnail">
-							<button class="menu-thumbnail__btn">
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Citrus Squid Carpaccio</h3>
-									<div>
-										<p>with orange zest</p>
-										<p>25€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">with orange zest</div>
+										<div class="menu-thumbnail__btn--subtitle--price">25€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -44,13 +47,13 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
-							<button class="menu-thumbnail__btn">
+							</div>
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Grandmother's Vegetable Soup</h3>
-									<div>
-										<p>carrots, parsnips, Jerusalem artichoke</p>
-										<p>35€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">carrots, parsnips, Jerusalem <br/>artichoke</div>
+										<div class="menu-thumbnail__btn--subtitle--price">35€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -58,13 +61,13 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
-							<button class="menu-thumbnail__btn">
+							</div>
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Onion Soup</h3>
-									<div>
-										<p>Revisited</p>
-										<p>20€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">Revisited</div>
+										<div class="menu-thumbnail__btn--subtitle--price">20€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -72,17 +75,17 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>   
+							</div>   
 						</div>
 						<h2>MAIN DISH</h2>
 						<hr class="divider--menu"/>
 						<div class="menu-thumbnail">
-							<button class="menu-thumbnail__btn">
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Scallops</h3>
-									<div>
-										<p>with mashed parsnip</p>
-										<p>40€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">with mashed parsnip</div>
+										<div class="menu-thumbnail__btn--subtitle--price">40€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -90,13 +93,13 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
-							<button class="menu-thumbnail__btn">
+							</div>
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Magret de canard</h3>
-									<div>
-										<p>with mashed potatoes</p>
-										<p>35€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">with mashed potatoes</div>
+										<div class="menu-thumbnail__btn--subtitle--price">35€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -104,13 +107,13 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
-							<button class="menu-thumbnail__btn">
+							</div>
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Game Hen</h3>
-									<div>
-										<p>with vegetable gnocchis</p>
-										<p>44€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">with vegetable gnocchis</div>
+										<div class="menu-thumbnail__btn--subtitle--price">44€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -118,17 +121,17 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
+							</div>
 						</div>
 						<h2>DESSERTS</h2>
 						<hr class="divider--menu"/>
 						<div class="menu-thumbnail">
-							<button class="menu-thumbnail__btn">
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Floral Ice Cream</h3>
-									<div>
-										<p>with hazelnut butter</p>
-										<p>18€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">with hazelnut butter</div>
+										<div class="menu-thumbnail__btn--subtitle--price">18€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -136,13 +139,13 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
-							<button class="menu-thumbnail__btn">
+							</div>
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Chocolate Lava Cake</h3>
-									<div>
-										<p>Revisited</p>
-										<p>22€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">Revisited</div>
+										<div class="menu-thumbnail__btn--subtitle--price">22€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -150,13 +153,13 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
-							<button class="menu-thumbnail__btn">
+							</div>
+							<div class="menu-thumbnail__btn">
 								<div class="menu-thumbnail__btn--title">
 									<h3>Napolean</h3>
-									<div>
-										<p>with blueberries and marzipan</p>
-										<p>23€</p>
+									<div class="menu-thumbnail__btn--subtitle">
+										<div class="menu-thumbnail__btn--subtitle--txt">with blueberries and marzipan</div>
+										<div class="menu-thumbnail__btn--subtitle--price">23€</div>
 									</div>
 								</div>
 								<div class="menu-thumbnail__btn--check">
@@ -164,7 +167,7 @@
 										<i class="fas fa-check-circle"></i>
 									</div>
 								</div>
-							</button>
+							</div>
 						</div>
 						<input type="button" name="order" class="btn btn--menu" value="Order"/>
 					</div>

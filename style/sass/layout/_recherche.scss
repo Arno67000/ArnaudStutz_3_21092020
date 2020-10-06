@@ -2,11 +2,24 @@
     margin-top: 0%;
     padding-top: 0%;
     padding-bottom: 15%;
+    margin-bottom: 5%;
     height: auto;
     background-color: $colour-bkgr;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include desktop {
+        width: 49.5%;
+        padding-bottom: 2%;
+        border: 3px solid $colour-bkgr-dark;
+        margin: 0%;
+    }
+    @include tablette {
+        width: 49%;
+        padding-bottom: 2%;
+        border: 3px solid $colour-bkgr-dark;
+        margin: 0%;
+    }
     & p {
         display: inline-block;
         width:79%;
@@ -23,6 +36,12 @@
         justify-content: center;
         align-items: flex-start;
         z-index: 1;
+        @include desktop {
+            background-color: $colour-bkgr;
+        }
+        @include tablette {
+            background-color: $colour-bkgr;
+        }
     }
 }
 .form {
@@ -33,8 +52,20 @@
     text-align: start;
     padding-bottom: 2%;
     margin-left: 6%;
-    @include text-typography;
+    @include text-typography(1.1rem);
     font-weight: 500;
+    @include desktop {
+        background-color: $colour-bkgr;
+        margin-top: 10%;
+        height: 2.5rem;
+        @include text-typography(1.4rem);
+    }
+    @include tablette {
+        background-color: $colour-bkgr;
+        height: 2rem;
+        @include text-typography(1.2rem);
+        margin-top: 8%;
+    }
 }
 
 .fa-map-marker-alt {
@@ -42,4 +73,14 @@
     margin-right: 0%;
     margin-left: 12%;
     font-size: 0.9rem;
+    @include desktop {
+        margin-top: 4.5%;
+        margin-right: 2%;
+        font-size: 1.3rem;
+    }
+    @include tablette {
+        margin-top: 6.5%;
+        margin-right: 2%;
+        font-size: 1.1rem;
+    }
 }

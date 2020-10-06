@@ -1,3 +1,4 @@
+/* COLORS */
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
@@ -6,3 +7,18 @@ $colour-bkgr: hsl(0,0%,94%);
 
 $colour-bkgr-dark: darken($colour-bkgr,4%);
 $colour-bkgr-shadow: darken($colour-bkgr,14%);
+
+$colour-primary-light: lighten($colour-primary,34%);
+$colour-secondary-light: lighten($colour-secondary,8%);
+$colour-gradient: linear-gradient(to top left, $colour-primary, $colour-secondary);
+/* SHADOWS */
+
+$shadows : 3px 5px 7px 1px $colour-bkgr-shadow;
+$shadows-enhanced : 5px 7px 3px 4px $colour-bkgr-shadow;
+
+/* BREAKPOINTS FOR RESPONSIVE */
+$breakpoints : (
+    "tablette-min": 760px,
+    "tablette-max": 1024px,
+    "desktop-min": 1025px,
+);

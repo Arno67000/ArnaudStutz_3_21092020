@@ -1,7 +1,8 @@
-@mixin text-typography {
+/*MIXINS FOR TYPOGRAPHY*/
+@mixin text-typography ($size){
     font-family: robotoregular, sans-serif;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: $size;
     color: black;
 }
 
@@ -23,15 +24,50 @@
     color: black;
 }
 
+/*MIXINS FOR BUTTONS */
+
 @mixin button-gradient {
     background: linear-gradient(to top left, $colour-primary, $colour-secondary);
     color: $colour-bkgr;
+    opacity: 1;
 }
 
 @mixin button-style {
     border: 0 none transparent;
     border-radius: 25px;
-    box-shadow: 3px 5px 7px 1px $colour-bkgr-shadow;
+    box-shadow: $shadows;
     font-size: 1rem;
     font-weight: bold;
+    @include desktop {
+        font-size: 1.4rem;
+        height: 5rem;
+    }
+    @include tablette {
+        font-size: 1.1rem;
+        height: 4.2rem;
+    }
+}
+
+/*MIXINS FOR ANIMATION MENUS*/
+@mixin delay {
+    @for $i from 1 through 3 {
+        &>div:nth-of-type(#{$i}n) {
+            animation: fadein 0.5s;
+            animation-delay: #{$i * 0.3}s;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+/*MIXINS FOR RESPONSIVE*/
+@mixin tablette {
+    @media (min-width: map-get($map: $breakpoints, $key: "tablette-min")) and (max-width: map-get($map: $breakpoints, $key: "tablette-max")) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: map-get($map: $breakpoints, $key: "desktop-min")) {
+        @content;
+    }
+    
 }
