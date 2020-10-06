@@ -59,6 +59,12 @@
     }
 }
 
+@mixin bigsize {
+    width: 400px;
+    height: 400px;
+    border-radius: 300px;
+}
+
 /*MIXINS FOR RESPONSIVE*/
 @mixin tablette {
     @media (min-width: map-get($map: $breakpoints, $key: "tablette-min")) and (max-width: map-get($map: $breakpoints, $key: "tablette-max")) {
@@ -70,4 +76,13 @@
         @content;
     }
     
+}
+
+@mixin nav-recherche-pattern {
+    height: auto;
+    background-color: $colour-bkgr;
+    align-items: center;        
+    border: $nav-border-desktop;
+    margin: 0;
+    padding-bottom: 2%;
 }

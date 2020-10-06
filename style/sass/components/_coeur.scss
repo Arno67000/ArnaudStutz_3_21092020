@@ -27,7 +27,8 @@
         color: $colour-secondary;
         &:hover { 
             opacity: 0.5;
-            transform: scale(0.82);    
+            transform: scale(0.82);
+            cursor: pointer;
         }
         &--menu {
             top: -4rem;

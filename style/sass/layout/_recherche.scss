@@ -10,15 +10,11 @@
     align-items: center;
     @include desktop {
         width: 49.5%;
-        padding-bottom: 2%;
-        border: 3px solid $colour-bkgr-dark;
-        margin: 0%;
+        @include nav-recherche-pattern;
     }
     @include tablette {
         width: 49%;
-        padding-bottom: 2%;
-        border: 3px solid $colour-bkgr-dark;
-        margin: 0%;
+        @include nav-recherche-pattern;
     }
     & p {
         display: inline-block;
@@ -54,6 +50,10 @@
     margin-left: 6%;
     @include text-typography(1.1rem);
     font-weight: 500;
+    &:focus {
+        background-color: $colour-bkgr;
+        color: color-text($colour-tertiary);
+    }
     @include desktop {
         background-color: $colour-bkgr;
         margin-top: 10%;

@@ -57,8 +57,8 @@ article {
     & picture img {
         width: 100%;
         height: auto;
-        margin: 0% 0% 0% 0%;
-        border-radius: 20px 20px 0 0;
+        margin: 0;
+        border-radius: $radius-top;
         @include desktop {
             height: 320px;
         }
@@ -86,7 +86,7 @@ article {
         &--new {
             width: 4.8rem;
             height: 2rem;
-            margin: 0px 0px 0px 0px;
+            margin: 0;
             position: relative;
             left: -1.2rem;
             top: -10.5rem;
